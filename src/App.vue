@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <section>
-      <div class="el-container">
-        <router-view></router-view>
-      </div>
-
+      <router-view></router-view>
     </section>
   </div>
 </template>
