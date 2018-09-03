@@ -3,7 +3,9 @@ import home from './page/home.vue'
 export default [
   {
     path: '/login',
-    component: login,
+    component: login
+  },
+  {
     path: '/home',
     component: home
   }
