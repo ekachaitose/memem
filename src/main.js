@@ -6,9 +6,9 @@ import VeeValidate from 'vee-validate'
 import Buefy from 'buefy'
 import 'buefy/lib/buefy.css'
 
+Vue.use(Buefy)
 Vue.use(VueRouter)
 Vue.config.productionTip = false
-Vue.use(Buefy)
 Vue.use(VeeValidate)
 
 const router = new VueRouter({ mode: 'history', routes })
