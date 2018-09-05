@@ -61,11 +61,11 @@
         </div>
         <div class="columns ">
           <div class="column is-half is-offset-one-quarter">
-            <div id="divPreview" v-for="(file,index) in dropFiles" :key="index">
-              <figure class="image is-3by2">
+            <div id="divPreview" v-for="(file,index) in dropFiles" :key="index" class="content has-text-centered">
+              <figure class="image is-256x256">
                 <img :src="createUrlImg(index)" />
               </figure>
-              <span>Image Name : {{file.name}}</span>
+              <span class="lable">Image Name : {{file.name}}</span>
 
             </div>
             <b-field>
@@ -81,7 +81,6 @@
                 </section>
               </b-upload>
             </b-field>
-
             <div class="tags">
               <span v-for="(file, index) in dropFiles" :key="index" class="tag is-primary">
                 {{file.name}}
@@ -89,6 +88,7 @@
                 </button>
               </span>
             </div>
+            <button class="button is-success">Upload</button>
           </div>
         </div>
       </div>
@@ -105,40 +105,7 @@
         name: 'demoniis',
         dDate: '',
         dropFiles: [],
-        url: null,
-        dataTbl: [
-          { 'id': 1, 'first_name': 'Jesse', 'last_name': 'Simmons', 'date': '2016-10-15 13:43:27', 'gender': 'Male' },
-          { 'id': 2, 'first_name': 'John', 'last_name': 'Jacobs', 'date': '2016-12-15 06:00:53', 'gender': 'Male' },
-          { 'id': 3, 'first_name': 'Tina', 'last_name': 'Gilbert', 'date': '2016-04-26 06:26:28', 'gender': 'Female' },
-          { 'id': 4, 'first_name': 'Clarence', 'last_name': 'Flores', 'date': '2016-04-10 10:28:46', 'gender': 'Male' },
-          { 'id': 5, 'first_name': 'Anne', 'last_name': 'Lee', 'date': '2016-12-06 14:38:38', 'gender': 'Female' }
-
-        ],
-        columnsTbl: [
-          {
-            field: 'id',
-            label: 'ID',
-            width: '40',
-            numeric: true
-          },
-          {
-            field: 'first_name',
-            label: 'First Name',
-          },
-          {
-            field: 'last_name',
-            label: 'Last Name',
-          },
-          {
-            field: 'date',
-            label: 'Date',
-            centered: true
-          },
-          {
-            field: 'gender',
-            label: 'Gender',
-          }
-        ]
+        url: null
       }
     },
     methods: {
