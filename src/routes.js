@@ -6,7 +6,7 @@ export default [
     component: login
   },
   {
-    path: '/home',
+    path: '/',
     component: home
   }
 ]

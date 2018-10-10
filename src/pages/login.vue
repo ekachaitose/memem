@@ -39,7 +39,7 @@
           )
           if (data.code === 200) {
             localStorage.setItem('currentUser', this.user.username)
-            this.$router.push('/Home')
+            this.$router.push('/')
           }
 
         } catch (error) {

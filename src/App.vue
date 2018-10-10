@@ -8,7 +8,24 @@
 
 <script>
   export default {
-
+    data() {
+      return {
+        currentUser: localStorage.getItem('currentUser'),
+        showNav: false,
+        name: 'demoniis',
+        dDate: '',
+        dropFiles: [],
+        url: null
+      }
+    },
+    methods: {
+      checkLogIn() {
+        let _logIn = localStorage.getItem('currentUser')
+        if(_logIn !== null){
+          
+        }
+      }
+    }
   }
 </script>
 
